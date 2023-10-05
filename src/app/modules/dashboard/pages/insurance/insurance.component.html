@@ -1,0 +1,118 @@
+<router-outlet></router-outlet>
+
+<div class="content-page">
+  <div class="top-header-section">
+    <div class="dashboard-title">
+      Dashboard
+    </div>
+    <button class="filter-button">
+      <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M7 10l5 5 5-5H7z"/>
+      </svg>
+      Filters
+    </button>
+  </div>
+
+    <div class="table-container">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+    
+          <ng-container matColumnDef="customerName">
+            <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+            <td mat-cell *matCellDef="let element"> {{ element.customerName }} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="customerNumber">
+            <th mat-header-cell *matHeaderCellDef> Customer Number </th>
+            <td mat-cell *matCellDef="let element"> {{ element.customerNumber }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="accountNumber">
+            <th mat-header-cell *matHeaderCellDef> Account Number </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-accountNumber"> {{ element.accountNumber }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="propertyOwner">
+            <th mat-header-cell *matHeaderCellDef> Property Owner </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-propertyOwner"> {{ element.propertyOwner }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="valuer">
+            <th mat-header-cell *matHeaderCellDef> Valuer </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-valuer"> {{ element.valuer }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="propertyDetails">
+            <th mat-header-cell *matHeaderCellDef> Property Details </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-propertyDetails"> {{ element.propertyDetails }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="currency">
+            <th mat-header-cell *matHeaderCellDef> Currency </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-currency"> {{ element.currency }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="jrr">
+            <th mat-header-cell *matHeaderCellDef> JRR </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-jrr"> {{ element.jrr }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="omv">
+            <th mat-header-cell *matHeaderCellDef> OMV </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-omv"> {{ element.omv }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="fsv">
+            <th mat-header-cell *matHeaderCellDef> FSV </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-fsv"> {{ element.fsv }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="riv">
+            <th mat-header-cell *matHeaderCellDef> RIV </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-riv"> {{ element.riv }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="rate">
+            <th mat-header-cell *matHeaderCellDef> Rate </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-rate"> {{ element.rate }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="lcyFsv">
+            <th mat-header-cell *matHeaderCellDef> LCY FSV </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-lcyFsv"> {{ element.lcyFsv }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="dateValued">
+            <th mat-header-cell *matHeaderCellDef> Date Valued </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-dateValued"> {{ element.dateValued }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-status"> {{ element.status }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="relationshipManager">
+            <th mat-header-cell *matHeaderCellDef> Relationship Manager </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-relationshipManager"> {{ element.relationshipManager }} </td>
+          </ng-container>
+          
+          <ng-container matColumnDef="collateralComments">
+            <th mat-header-cell *matHeaderCellDef> Collateral Comments </th>
+            <td mat-cell *matCellDef="let element" class="mat-column-collateralComments"> {{ element.collateralComments }} </td>
+          </ng-container>
+    
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row;  odd as isOdd; columns: displayedColumns;" [class.odd-row]="isOdd" (click)="selection.toggle(row)"
+          class="hoverable-row" [ngClass]="{'selected': selection.isSelected(row)}">
+      </tr>
+    </table>
+  </div>
+
+  <div class="paginator">
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of data">
+    </mat-paginator>
+  </div>
+</div>
+
+  

@@ -1,0 +1,24 @@
+<app-dashboard-container>
+
+  <app-dashboard-header></app-dashboard-header>
+
+  <app-dashboard-content-container style="flex: 1 1 auto; height: calc(100vh - var(--dashboard-header-height));">
+    
+    <app-side-nav-container>
+      <app-left-sidebar></app-left-sidebar>
+    </app-side-nav-container>
+
+    <app-main-content-container style="flex: 1 1 auto; height: calc(100vh - var(--dashboard-header-height))">
+      <!-- <app-entry-component></app-entry-component> -->
+      <router-outlet></router-outlet>
+    </app-main-content-container>
+
+    <section class="main-dash-side-nav">
+      <app-right-sidebar></app-right-sidebar>
+    
+    </section>
+
+  </app-dashboard-content-container>
+
+
+</app-dashboard-container>

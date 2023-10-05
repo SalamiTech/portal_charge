@@ -1,0 +1,79 @@
+.content-page {
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+.top-header-section {
+  height: 10%;
+}
+
+.table-container {
+  height: 80%;
+  width: 82vw;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: auto;
+  white-space: nowrap;
+}
+
+tr.hoverable-row:hover {
+  background-color: #f2f2f2; /* Apply ash color on hover */
+  cursor: pointer;
+}
+
+tr.selected {
+  background-color: #dcdcdc; /* Apply a different color to selected rows */
+}
+
+.paginator {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+tr.odd-row{
+  background: #f3f4F6;
+}
+
+.top-header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+.dashboard-title {
+  font-weight: bold;
+  font-size: 25px;
+  background: linear-gradient(93.67deg, #FFB81D 1.23%, #FF681D 58.64%);
+  -webkit-background-clip: text; /* Apply the gradient as text color */
+  color: transparent; /* Make text transparent to show the gradient */
+}
+
+.filter-button {
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20;
+  padding-right: 20px;
+  background-color: #DBEAFE;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(82, 82, 236);
+  font-weight: bold;
+  font-size: 14px;
+  margin-left: 10px;
+
+  .filter-icon {
+    fill: rgb(82, 82, 236);
+    margin-right: 5px;
+  }
+}
