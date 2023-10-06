@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { MakerPortalComponent } from './modules/maker-portal/maker-portal.component';
 import { ApprovalPortalComponent } from './modules/approval-portal/approval-portal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MakerPortalComponent,
-    ApprovalPortalComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MakerPortalComponent,
+        ApprovalPortalComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        SharedModule
+    ]
 })
 export class AppModule { }
