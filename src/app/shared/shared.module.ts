@@ -29,8 +29,7 @@ import { CountDownTimerComponent } from './lib/count-down-timer/count-down-timer
   ],
   imports: [
     CommonModule,
-    MaterialModule,
-    SearchDropdownModule
+    SearchDropdownModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [
