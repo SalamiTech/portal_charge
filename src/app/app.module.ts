@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MakerPortalComponent } from './modules/maker-portal/maker-portal.component';
+import { ApprovalPortalComponent } from './modules/approval-portal/approval-portal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MakerPortalComponent,
+    ApprovalPortalComponent
   ],
   imports: [
     BrowserModule,
