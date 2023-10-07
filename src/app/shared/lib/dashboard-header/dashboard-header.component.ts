@@ -42,9 +42,9 @@ export class DashboardHeaderComponent implements OnInit {
   }
 
 
-  saveAndExit(){
-    this.eventBusService.emit(new EmitEvent(Events.SAVE_AND_EXIT, {
-      type: "Save and Exit application"
-    }));
-  }
+  // saveAndExit(){
+  //   this.eventBusService.emit(new EmitEvent(Events.SAVE_AND_EXIT, {
+  //     type: "Save and Exit application"
+  //   }));
+  // }
 }

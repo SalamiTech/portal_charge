@@ -13,7 +13,8 @@ import { SharedModule } from "./shared/shared.module";
         MakerPortalComponent,
         ApprovalPortalComponent
     ],
-    providers: [],
+    providers: [
+    ],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,

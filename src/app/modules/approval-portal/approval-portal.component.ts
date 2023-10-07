@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./approval-portal.component.scss']
 })
 export class ApprovalPortalComponent {
+assetUrl: any;
 
 }

@@ -1,3 +1,42 @@
-<p>approval-portal works!</p>
-<app-side-nav-container></app-side-nav-container>
+<app-dashboard-header></app-dashboard-header>
+<app-dashboard-content-container style="width: 100%;">
+<app-side-nav-container><nav class="sidelinks-wrapper">
+
+    <div class="upper-nav">
+        <div routerLinkActive='sidelinkActive' matRipple class="sidelink-div" routerLink="dashboard">
+            <img [src]="assetUrl+'/assets/svgs/icn_dashboard.svg'" alt="">
+            <a routerLinkActive='sidelinkActive'>Dashboard</a>
+        </div>
+
+    </div>
+
+    <div class="lower-nav">
+
+        <div routerLinkActive='sidelinkActive' class="sidelink-div" routerLink="doc-type">
+            <a routerLinkActive='sidelinkActive'>Document Type</a>
+        </div>
+
+        <div routerLinkActive='sidelinkActive' class="sidelink-div" routerLink="pending">
+            <a routerLinkActive='sidelinkActive'>Pending</a>
+        </div>
+
+        <div routerLinkActive='sidelinkActive' class="sidelink-div" routerLink="completed">
+            <a routerLinkActive='sidelinkActive'>Completed</a>
+        </div>
+
+        <div routerLinkActive='sidelinkActive' class="sidelink-div" routerLink="drafts">
+            <a routerLinkActive='sidelinkActive'>Drafts</a>
+        </div>
+
+        <div routerLinkActive='sidelinkActive' class="sidelink-div" routerLink="history">
+            <a routerLinkActive='sidelinkActive'>History</a>
+        </div>
+
+    </div>
+
+
+
+
+</nav></app-side-nav-container>
 <router-outlet></router-outlet>
+</app-dashboard-content-container>
