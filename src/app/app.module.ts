@@ -6,6 +6,7 @@ import { MakerPortalComponent } from './modules/maker-portal/maker-portal.compon
 import { ApprovalPortalComponent } from './modules/approval-portal/approval-portal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from "./shared/shared.module";
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { SharedModule } from "./shared/shared.module";
         ApprovalPortalComponent
     ],
     providers: [
-    ],
+        JwtHelperService
+      ],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,

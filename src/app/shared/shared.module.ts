@@ -12,6 +12,7 @@ import { SearchBarComponent } from './lib/search-bar/search-bar.component';
 import { SideNavContainerComponent } from './lib/side-nav-container/side-nav-container.component';
 import { FailedLoadingComponent } from './lib/failed-loading/failed-loading.component';
 import { CountDownTimerComponent } from './lib/count-down-timer/count-down-timer.component';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 
 @NgModule({
@@ -30,6 +31,9 @@ import { CountDownTimerComponent } from './lib/count-down-timer/count-down-timer
   imports: [
     CommonModule,
     SearchDropdownModule,
+  ],
+  providers: [
+    JwtHelperService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   exports: [

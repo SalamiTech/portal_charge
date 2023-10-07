@@ -8,7 +8,6 @@ import { ApprovedRequestsComponent } from './pages/approved-requests/approved-re
 import { RejectedRequestsComponent } from './pages/rejected-requests/rejected-requests.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { UserManagementsComponent } from './pages/user-managements/user-managements.component';
-import { JwtHelperService } from '@auth0/angular-jwt';
 
 
 @NgModule({
@@ -24,8 +23,6 @@ import { JwtHelperService } from '@auth0/angular-jwt';
     CommonModule,
     ApprovalPortalRoutingModule,
   ],
-  providers: [
-    JwtHelperService
-  ]
+ 
 })
 export class ApprovalPortalModule { }
