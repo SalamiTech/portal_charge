@@ -1,46 +1,74 @@
-.dashboard-navigation {
+.header-navigation {
   color: white;
-
+  display: block;
   height: var(--dashboard-header-height);
-  border-bottom: 1px solid #00000015;
-  // background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #F5F6F7;
-  // border-bottom: 0.5px solid rgba(26, 49, 77, 0.11);;
-
-  background-color: #0033a1;
   color: #ffffff;
   font-family: "BentonSans Medium", Arial;
 }
 
-a.branding {
+.branding {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-.logo {
+.logo-image {
   width: 45px;
-  height: 45px;
+  height: 30px;
+  margin-left: 0px;
+  margin-top: -6px;
 }
 
 .logo-text {
-  color: #0033aa;
-  font-weight: 800;
-  font-size: 17px;
-  margin-left: 3px;
-  margin-top: 5px;
+  width: 84px;
+  height: 34px;
+  margin-left: 1px;
+  margin-top: 7px;
 }
 
-.top-header {
+.bell-icon{
+  width: 31px;
+  height: 18px;
+  margin-top: 13px;
+  margin-right: 15px;
+
+}
+.staff-data{
+  margin-right: -50px;
+  display: flex;
+}
+.staff-display{
+  background: linear-gradient(0deg, #B150C5, #B150C5),
+  linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  
+  border-radius: 100%;
+  padding: 11px;
+}
+.staff-name{
+  font-family: 'Inter';
+  color: black;
+  font-weight: 600;
+  font-size: 13px;
+  align-self: end;
+}
+.top-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
   width: 100%;
-  height: 10px;
-  background: linear-gradient(93.67deg, #0064fc 1.23%, #0033aa 58.64%);
+  padding: 8px 38px;
+  justify-content: space-between;
+  background: linear-gradient(360deg, #f7f8f9 89.23%, #0033aa 86.64%);
+  width: var(--dashboard-header-width);
+
+
 }
 
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 18px 40px;
 }
 
 .header-text {
@@ -66,7 +94,7 @@ a.highlight img {
 }
 
 .dashboard-content {
-  // background-color: orange;
+  /* // background-color: orange; */
   flex: 1 1 auto;
 }
 
@@ -75,7 +103,7 @@ a.highlight img {
   height: 30px;
 }
 
-button {
+.button {
   background-color: transparent;
 }
 
@@ -99,7 +127,7 @@ button {
 .actions {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-right: 3%;
 }
 
 .info,

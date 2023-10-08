@@ -8,21 +8,27 @@ import { ApprovedRequestsComponent } from './pages/approved-requests/approved-re
 import { RejectedRequestsComponent } from './pages/rejected-requests/rejected-requests.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { UserManagementsComponent } from './pages/user-managements/user-managements.component';
+import { SharedModule } from "../../shared/shared.module";
+import { MaterialModule } from 'src/app/material.module';
+import { AddNewRequestsComponent } from './pages/add-new-requests/add-new-requests.component';
 
 
 @NgModule({
-  declarations: [
-    DashboardComponent,
-    PendingRequestComponent,
-    ApprovedRequestsComponent,
-    RejectedRequestsComponent,
-    HistoryComponent,
-    UserManagementsComponent
-  ],
-  imports: [
-    CommonModule,
-    ApprovalPortalRoutingModule,
-  ],
- 
+    declarations: [
+        DashboardComponent,
+        PendingRequestComponent,
+        ApprovedRequestsComponent,
+        RejectedRequestsComponent,
+        HistoryComponent,
+        UserManagementsComponent,
+        AddNewRequestsComponent,
+    
+    ],
+    imports: [
+        CommonModule,
+        ApprovalPortalRoutingModule,
+        SharedModule,
+        
+    ]
 })
 export class ApprovalPortalModule { }

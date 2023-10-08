@@ -16,8 +16,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     RoutingModule,
     ReactiveFormsModule,
-    SharedModule,
-    MaterialModule
+    FormsModule,
+    MaterialModule,
+    SharedModule
   ]
 })
 export class AuthenticationModule { }

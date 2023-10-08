@@ -5,6 +5,7 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 
+import decode from 'jwt-decode';
 import { IRole } from '../models/login.model';
 import { AuthService } from './auth.service';
 import { StateStorageService } from './state-storage.service';
@@ -28,9 +29,9 @@ export class RoleGuardService implements CanActivate {
 
 
     // decode the token to get its payload
-    const _role = this.auth.getCurrentUserRole() as IRole;
+    const _role   = this.auth.getCurrentUserRole() as IRole;
 
-    if (!_role) this.router.navigate(['login']);
+    if(!_role) this.router.navigate(['login']);
 
     // const IRoles = ["MAKER", "CHECKER", ADMIN]
     /**
@@ -40,7 +41,7 @@ export class RoleGuardService implements CanActivate {
 
     const roles = _role ? [_role] : [];
 
-    if (!this.auth.isAuthenticated() || (!this.hasIRole(roles, expectedIRole[0]))) {
+    if ( !this.auth.isAuthenticated() || ( !this.hasIRole(roles, expectedIRole[0]) )  ) {
       this.router.navigate(['login']);
       return false;
     }
