@@ -1,6 +1,4 @@
 .sidelinks-wrapper {
-    border-right: 0.5px solid rgba(26, 49, 77, 0.11);
-    box-shadow: 5px 1 8px rgba(0, 0, 0, 0.1); 
     width: 180px;
     background-color: #fff;
     display: flex;
@@ -22,6 +20,7 @@
     }
 
     .charge-request h2 {
+        margin-top: 20px;
         color:#0062E1;
     }
 
@@ -29,7 +28,7 @@
         margin-right: 10px;
         vertical-align: middle;
         font-size: 22px; 
-        color: #1A314D;
+        color: #424e5e;
         transition: color 0.3s;
 
         &:hover {

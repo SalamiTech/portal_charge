@@ -28,6 +28,7 @@ import { AddNewRequestsComponent } from './pages/add-new-requests/add-new-reques
         CommonModule,
         ApprovalPortalRoutingModule,
         SharedModule,
+        MaterialModule
         
     ]
 })

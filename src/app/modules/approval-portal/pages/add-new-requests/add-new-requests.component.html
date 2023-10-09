@@ -1,1 +1,86 @@
-<p>add-new-requests works!</p>
+<div class="subheader">
+    <div class="subheader-left">
+        <div class="subheader-title">
+            <h2>Dashboard</h2>
+        </div>
+    </div>
+
+    <div class="subheader-image">
+        <img src="assets/images/sub-head.svg" alt="Subhead">
+    </div>
+</div>
+
+<div class="features-row">
+    <!-- Rectangle Box -->
+    <div class="rectangle-box">
+        <img src="assets/icons/sym_icn.svg" alt="Your SVG Description" class="feature-icon">
+        <div class="text-section">
+            <span class="title">Overall Change</span>
+            <span class="amount">GHS 2998</span>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons-section">
+        <button mat-raised-button class="new-request-btn">
+            <mat-icon>add_circle_outline</mat-icon> New Request
+        </button>
+
+        <button mat-button [matMenuTriggerFor]="filterMenu" class="filter-btn">
+            <div class="flex-container">
+                <mat-icon>filter_list</mat-icon>
+                <span>Filter</span>
+                <mat-icon>expand_more</mat-icon>
+            </div>
+        </button>        
+        
+        
+        
+        <mat-menu #filterMenu="matMenu">
+            <h3>FILTER OPTIONS</h3>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Status
+            </button>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Names
+            </button>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Roles of Employees
+            </button>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Offense
+            </button>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Date of Offense
+            </button>
+        </mat-menu>        
+
+
+        <button mat-button [matMenuTriggerFor]="exportMenu" mat-raised-button class="export-btn">
+            <div class="flex-container">
+                <mat-icon>description</mat-icon>
+                <span>Export</span>
+                <mat-icon>expand_more</mat-icon>
+            </div>
+
+            
+        </button>
+        <mat-menu #exportMenu="matMenu">
+            <h3>EXPORT TO</h3>
+            <button mat-menu-item>
+              PDF
+            </button>
+            <button mat-menu-item>
+                CSV
+            </button>
+           
+        </mat-menu>        
+        
+    </div>
+
+    <!-- Search Bar -->
+    <div class="custom-search-bar">
+        <input type="text" placeholder="Search here">
+    </div>
+    
+</div>
