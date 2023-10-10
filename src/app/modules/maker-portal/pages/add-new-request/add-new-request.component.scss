@@ -1,0 +1,28 @@
+.head-text {
+    margin-left: 25px;
+    margin-top: 20px;
+    text-align: justify;
+    font-weight: 600; 
+    font-size: 24px; 
+    color: #333; 
+    letter-spacing: 1px; 
+    padding-bottom: 10px; 
+}
+
+.custom-card {
+    margin: auto;
+    margin-top: 30px;
+    border: 1px  ;
+    width: 900px;
+    height: fit-content;
+    display: block;
+    /* overflow: scroll; */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+
+.mat-card-title {
+    font-size: 15px; 
+}
+

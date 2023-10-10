@@ -7,6 +7,7 @@ import { RejectedRequestComponent } from './pages/rejected-request/rejected-requ
 import { ApprovedRequestComponent } from './pages/approved-request/approved-request.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
+import { AddNewRequestComponent } from './pages/add-new-request/add-new-request.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
     component: MakerPortalComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard/add-new-request', component: AddNewRequestComponent, },
       { path: 'pending-request', component: PendingRequestComponent },
       { path: 'approved-request', component: ApprovedRequestComponent },
       { path: 'rejected-request', component: RejectedRequestComponent },
