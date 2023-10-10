@@ -40,4 +40,14 @@
         width: 100%;
         margin: 8px 0;
     }
+
+    .sidelink-div-active a, .sidelink-div-active mat-icon {
+        color: #0062E1; /* Blue color for active state */
+    }
+    
+    .mat-divider-active {
+        border-color: #0062E1;
+    }
+    
+    
 }

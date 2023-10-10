@@ -6,8 +6,6 @@ import { PendingRequestComponent } from './pages/pending-request/pending-request
 import { ApprovedRequestsComponent } from './pages/approved-requests/approved-requests.component';
 import { RejectedRequestsComponent } from './pages/rejected-requests/rejected-requests.component';
 import { HistoryComponent } from './pages/history/history.component';
-import { UserManagementsComponent } from './pages/user-managements/user-managements.component';
-import { AddNewRequestsComponent } from './pages/add-new-requests/add-new-requests.component';
 
 const routes: Routes = [
   {
@@ -15,12 +13,13 @@ const routes: Routes = [
     component: ApprovalPortalComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'dashboard/add-new-request', component: AddNewRequestsComponent }, // New route
+      //move to maker
+      // { path: 'dashboard/add-new-request', component: AddNewRequestsComponent }, 
       { path: 'pending-request', component: PendingRequestComponent },
       { path: 'approved-request', component: ApprovedRequestsComponent },
       { path: 'rejected-request', component: RejectedRequestsComponent },
       { path: 'history', component: HistoryComponent },
-      { path: 'user-management', component: UserManagementsComponent }
+  
 
     ]
   }

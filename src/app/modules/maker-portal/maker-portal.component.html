@@ -1,2 +1,62 @@
-<p>maker-portal works!</p>
-<router-outlet></router-outlet>
+<app-dashboard-container>
+
+    <app-dashboard-header></app-dashboard-header>
+  
+    <app-dashboard-content-container style="flex: 1 1 auto; height: calc(100vh - var(--dashboard-header-height));">
+      
+      <app-side-nav-container>
+        <div class="sidelinks-wrapper">
+
+            <div class="charge-request">
+                <h2>CHARGE REQUEST</h2>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="sidelink-div" routerLink="dashboard" routerLinkActive="sidelink-div-active">
+                <mat-icon>dashboard</mat-icon>
+                <a routerLinkActive='sidelinkActive'>Dashboard</a>
+            </div>
+            <mat-divider [ngClass]="{'mat-divider-active': isRouteActive('dashboard')}"></mat-divider>
+
+            <div class="sidelink-div" routerLink="pending-request" routerLinkActive="sidelink-div-active">
+                <mat-icon>hourglass_empty</mat-icon>
+                <a routerLinkActive='sidelinkActive'>Pending Requests</a>
+            </div>
+            <mat-divider [ngClass]="{'mat-divider-active': isRouteActive('pending-request')}"></mat-divider>
+
+            <div class="sidelink-div" routerLink="approved-request" routerLinkActive="sidelink-div-active">
+                <mat-icon>check_circle_outline</mat-icon>
+                <a routerLinkActive='sidelinkActive'>Approved Requests</a>
+            </div>
+            <mat-divider [ngClass]="{'mat-divider-active': isRouteActive('approved-request')}"></mat-divider>
+
+            <div class="sidelink-div" routerLink="rejected-request" routerLinkActive="sidelink-div-active">
+                <mat-icon>block</mat-icon>
+                <a routerLinkActive='sidelinkActive'>Rejected Requests</a>
+            </div>
+            <mat-divider [ngClass]="{'mat-divider-active': isRouteActive('rejected-request')}"></mat-divider>
+
+            <div class="sidelink-div" routerLink="history" routerLinkActive="sidelink-div-active">
+                <mat-icon>history</mat-icon>
+                <a routerLinkActive='sidelinkActive'>History</a>
+            </div>
+            <mat-divider [ngClass]="{'mat-divider-active': isRouteActive('history')}"></mat-divider>
+
+            <div class="sidelink-div" routerLink="user-management" routerLinkActive="sidelink-div-active">
+                <mat-icon>manage_accounts</mat-icon>
+                <a routerLinkActive='sidelinkActive'>User Management</a>
+            </div>
+            <mat-divider [ngClass]="{'mat-divider-active': isRouteActive('user-management')}"></mat-divider>
+
+        </div>
+        
+      </app-side-nav-container>
+  
+      <app-main-content-container style="flex: 1 1 auto; height: calc(100vh - var(--dashboard-header-height))">
+        <router-outlet></router-outlet>
+      </app-main-content-container>
+  
+    </app-dashboard-content-container>
+  
+</app-dashboard-container>

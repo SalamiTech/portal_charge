@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
 
-
 export interface TableElement {
   accountNumber: string;
   name: string;
@@ -80,11 +79,11 @@ const ELEMENT_DATA: TableElement[] = [
 ];
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-pending-request',
+  templateUrl: './pending-request.component.html',
+  styleUrls: ['./pending-request.component.scss']
 })
-export class DashboardComponent {
+export class PendingRequestComponent {
   displayedColumns: string[] = [
     'select',
     'accountNumber',
@@ -122,3 +121,4 @@ export class DashboardComponent {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row`;
   }
 }
+

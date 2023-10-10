@@ -7,10 +7,8 @@ import { PendingRequestComponent } from './pages/pending-request/pending-request
 import { ApprovedRequestsComponent } from './pages/approved-requests/approved-requests.component';
 import { RejectedRequestsComponent } from './pages/rejected-requests/rejected-requests.component';
 import { HistoryComponent } from './pages/history/history.component';
-import { UserManagementsComponent } from './pages/user-managements/user-managements.component';
 import { SharedModule } from "../../shared/shared.module";
 import { MaterialModule } from 'src/app/material.module';
-import { AddNewRequestsComponent } from './pages/add-new-requests/add-new-requests.component';
 
 
 @NgModule({
@@ -19,10 +17,7 @@ import { AddNewRequestsComponent } from './pages/add-new-requests/add-new-reques
         PendingRequestComponent,
         ApprovedRequestsComponent,
         RejectedRequestsComponent,
-        HistoryComponent,
-        UserManagementsComponent,
-        AddNewRequestsComponent,
-    
+        HistoryComponent,    
     ],
     imports: [
         CommonModule,
