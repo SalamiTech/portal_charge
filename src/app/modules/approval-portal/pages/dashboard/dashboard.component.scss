@@ -285,6 +285,31 @@ tr.odd-row {
     color: #03A;
     justify-content: center;
 }
+.status-approved {
+    display: flex;
+    width: 50px;
+    padding: 6.504px 14.009px;
+    align-items: center;
+    border-radius: 7.504px;
+    border: 0.75px solid #008533;
+    background: rgba(46, 125, 50, 0.16);
+    color:#2E7D32; 
+    justify-content: center; 
+}
+
+
+
+.status-reject {
+    display: flex;
+    width: 50px;
+    padding: 6.504px 14.009px;
+    align-items: center;
+    border-radius: 7.504px;
+    border: 0.75px solid #DC0A0A;
+    background: rgba(220,10,10,0.16);
+    color: #DC0A0A; 
+    justify-content: center; 
+}
 
 .mat-cell,
 .mat-header-cell {
