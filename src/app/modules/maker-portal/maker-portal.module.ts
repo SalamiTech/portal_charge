@@ -10,6 +10,7 @@ import { HistoryComponent } from './pages/history/history.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material.module';
+import { AddNewRequestComponent } from './pages/add-new-request/add-new-request.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MaterialModule } from 'src/app/material.module';
     ApprovedRequestComponent,
     RejectedRequestComponent,
     HistoryComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    AddNewRequestComponent
   ],
   imports: [
     CommonModule,
