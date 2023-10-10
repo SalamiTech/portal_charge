@@ -16,7 +16,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'pending-request', component: PendingRequestComponent },
       { path: 'approved-request', component: ApprovedRequestComponent },
-      { path: 'rejected-requesr', component: RejectedRequestComponent },
+      { path: 'rejected-request', component: RejectedRequestComponent },
       { path: 'history', component: HistoryComponent },
       { path: 'user-management', component: UserManagementComponent }
     ]
