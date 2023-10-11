@@ -7,7 +7,7 @@
 
 .table-container {
     height: 60%;
-    width: 82vw;
+    width: 84vw;
     display: flex;
     flex-direction: column;
     box-shadow: none !important; 
@@ -42,13 +42,10 @@ tr.odd-row {
     padding: 10px 40px;
 }
 
+// modification of paginator
 .paginator {
-    height: 5px; 
-    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5; 
 }
 
 .status-pending {
@@ -84,7 +81,6 @@ tr.odd-row {
 }
 
 .features-row {
-    margin-right: 80px;
     margin-top: 50px;
     margin-bottom: 30px;
     display: flex;
@@ -184,7 +180,7 @@ tr.odd-row {
 .custom-search-bar {
     width: 300px;
     height: 36px; 
-    margin-right: 40px;
+    margin-right: 30px;
     border: 1px solid #ccc; 
     border-radius: 5px; 
     display: flex;

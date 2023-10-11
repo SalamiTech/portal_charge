@@ -11,9 +11,9 @@
 
 .custom-card {
     margin: auto;
-    margin-top: 30px;
+    margin-top: 100px;
     border: 1px  ;
-    width: 900px;
+    width: 600px;
     height: fit-content;
     display: block;
     /* overflow: scroll; */
@@ -23,6 +23,27 @@
     }
 
 .mat-card-title {
-    font-size: 15px; 
+    font-size: 15px;
+    margin-bottom: 10px 
 }
 
+.form-content {
+    padding-bottom: 10px;
+  }
+
+.acc-name {
+    width: 570px;
+}
+
+.acc-input {
+    width: 570px
+}
+
+.form1-but {
+    margin-left: 430px;
+}
+.form1-button {
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
