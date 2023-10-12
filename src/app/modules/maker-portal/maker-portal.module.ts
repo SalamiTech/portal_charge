@@ -11,6 +11,7 @@ import { UserManagementComponent } from './pages/user-management/user-management
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material.module';
 import { AddNewRequestComponent } from './pages/add-new-request/add-new-request.component';
+import { DashTableComponent } from './components/dash-table/dash-table.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AddNewRequestComponent } from './pages/add-new-request/add-new-request.
     RejectedRequestComponent,
     HistoryComponent,
     UserManagementComponent,
-    AddNewRequestComponent
+    AddNewRequestComponent,
+    DashTableComponent
   ],
   imports: [
     CommonModule,

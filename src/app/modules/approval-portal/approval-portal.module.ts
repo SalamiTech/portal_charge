@@ -9,6 +9,9 @@ import { RejectedRequestsComponent } from './pages/rejected-requests/rejected-re
 import { HistoryComponent } from './pages/history/history.component';
 import { SharedModule } from "../../shared/shared.module";
 import { MaterialModule } from 'src/app/material.module';
+import { FormPendingComponent } from './components/form-pending/form-pending.component';
+import { FormRejectedComponent } from './components/form-rejected/form-rejected.component';
+import { FormApprovalComponent } from './components/form-approval/form-approval.component';
 
 
 @NgModule({
@@ -17,7 +20,10 @@ import { MaterialModule } from 'src/app/material.module';
         PendingRequestComponent,
         ApprovedRequestsComponent,
         RejectedRequestsComponent,
-        HistoryComponent,    
+        HistoryComponent,
+        FormPendingComponent,
+        FormRejectedComponent,
+        FormApprovalComponent,    
     ],
     imports: [
         CommonModule,
