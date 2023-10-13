@@ -2,6 +2,12 @@ import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarModule,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 interface AccountName {
   value: string;
@@ -49,14 +55,35 @@ export class AddNewRequestComponent {
 
 
   assetUrl = environment.assetsUrl;
+  horizontalPosition: MatSnackBarHorizontalPosition = 'start';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
-  constructor(private location: Location, private router: Router){}
+
+  constructor(private location: Location, private router: Router, private _snackBar: MatSnackBar) {} 
+
+  openSnackBar() {
+    this._snackBar.open('Successfully submitted!', 'Close', {
+      duration: 5000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      panelClass: 'success-snackbar'
+    });
+}
+
 
   gotoDashboard(){
-    this.router.navigate(['maker-portal/home/dashboard/dash-confirm']);
-  }
-  
-  goBack(): void {
-    this.location.back();
-  }
+    this.router.navigate(['maker-portal/home/dashboard/dash-confirm']).then(() => {
+      setTimeout(() => {
+        this.openSnackBar();
+      }, 100);
+    });
+}
+
+submitForm() {
+    this.openSnackBar();
+    this.gotoDashboard();
+}
+
+
+
 }
