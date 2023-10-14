@@ -1,1 +1,139 @@
-<p>history works!</p>
+<h3 class="head-text">History</h3>
+<div class="features-row">
+    <!-- Buttons -->
+    <div class="buttons-section">
+        <button mat-button [matMenuTriggerFor]="filterMenu" class="filter-btn">
+            <div class="flex-container">
+                <mat-icon>filter_list</mat-icon>
+                <span>Filter</span>
+                <mat-icon>expand_more</mat-icon>
+            </div>
+        </button>        
+        
+        <mat-menu #filterMenu="matMenu">
+            <h3>FILTER OPTIONS</h3>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Status
+            </button>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Names
+            </button>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Roles of Employees
+            </button>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Offense
+            </button>
+            <button mat-menu-item>
+                <mat-checkbox></mat-checkbox> Date of Offense
+            </button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="exportMenu" mat-raised-button class="export-btn">
+            <div class="flex-container">
+                <mat-icon>description</mat-icon>
+                <span>Export</span>
+                <mat-icon>expand_more</mat-icon>
+            </div>
+
+        </button>
+        <mat-menu #exportMenu="matMenu">
+            <h3>EXPORT TO</h3>
+            <button mat-menu-item>
+                PDF
+            </button>
+            <button mat-menu-item>
+                CSV
+            </button>
+
+        </mat-menu>
+
+    </div>
+
+    <!-- Search Bar -->
+    <div class="custom-search-bar">
+        <input type="text" placeholder="Search here">
+    </div>
+
+</div>
+
+
+<div class="content-page">
+
+
+
+    <div class="table-container">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+            <!-- Checkbox Column -->
+            <ng-container matColumnDef="select">
+                <th mat-header-cell *matHeaderCellDef>
+                    <mat-checkbox (change)="$event ? toggleAllRows() : null" [checked]="isAllSelected()"
+                        [indeterminate]="selection.hasValue() && !isAllSelected()">
+                    </mat-checkbox>
+                </th>
+                <td mat-cell *matCellDef="let row">
+                    <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+                        [checked]="selection.isSelected(row)">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="accountNumber">
+                <th mat-header-cell *matHeaderCellDef> Account Number</th>
+                <td mat-cell *matCellDef="let element" class="mat-column-accountNumber"> {{ element.accountNumber }}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element" class="mat-column-name"> {{ element.name }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="roleOfPerson">
+                <th mat-header-cell *matHeaderCellDef> Role of Person</th>
+                <td mat-cell *matCellDef="let element" class="mat-column-roleOfPerson"> {{ element.roleOfPerson }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="amount">
+                <th mat-header-cell *matHeaderCellDef> Amount</th>
+                <td mat-cell *matCellDef="let element" class="mat-column-amount"> {{ element.amount }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status</th>
+                <td mat-cell *matCellDef="let element" class="mat-column-status"> <span class="status-pending"
+                        [ngClass]="{'status-pending': element.status.toLowerCase() === 'pending', 'status-approved': element.status.toLowerCase() === 'approved','status-reject': element.status.toLowerCase() === 'rejected'}">{{ element.status }}
+                    </span>
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="typeOfOffense">
+                <th mat-header-cell *matHeaderCellDef> Type of Offense </th>
+                <td mat-cell *matCellDef="let element" class="mat-column-typeOfOffense"> {{ element.typeOfOffense }}
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date</th>
+                <td mat-cell *matCellDef="let element" class="mat-column-date"> {{ element.date }} </td>
+            </ng-container>
+
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row;  odd as isOdd; columns: displayedColumns;" [class.odd-row]="isOdd"
+                (click)="selection.toggle(row)" class="hoverable-row"
+                [ngClass]="{'selected': selection.isSelected(row)}">
+            </tr>
+        </table>
+    </div>
+
+    <div class="paginator">
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of data">
+        </mat-paginator>
+    </div>
+</div>
+
+

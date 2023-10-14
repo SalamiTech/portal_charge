@@ -61,6 +61,10 @@ export class AddNewRequestComponent {
 
   constructor(private location: Location, private router: Router, private _snackBar: MatSnackBar) {} 
 
+  goBack(): void {
+    this.location.back();
+  }
+
   openSnackBar() {
     this._snackBar.open('Successfully submitted!', 'Close', {
       duration: 5000,
