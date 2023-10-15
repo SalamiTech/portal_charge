@@ -26,9 +26,9 @@ const routes: Routes = [
       { path: 'rejected-request', component: RejectedRequestComponent },
       { path: 'history', component: HistoryComponent },
       { path: 'user-management', component: UserManagementComponent },
-      { path: 'view-pending/:id', component: ViewPendingComponent },
-      { path: 'view-rejected/:id', component: ViewRejectedComponent },
-      { path: 'view-approved/:id', component: ViewApprovedComponent }
+      { path: 'view-pending/:accountNumber', component: ViewPendingComponent },
+      { path: 'view-rejected/:accountNumber', component: ViewRejectedComponent },
+      { path: 'view-approved/:accountNumber', component: ViewApprovedComponent }
     ]
   },
 

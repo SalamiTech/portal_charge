@@ -120,6 +120,7 @@ export class PendingRequestComponent {
   constructor(private router: Router) {}
   navigateToDetails(row: TableElement) {
     // Navigate to the details view component and pass the selected row data
+    console.log("Navigating to details with data:", row);
     this.router.navigate([
       '/maker-portal/home/view-pending',
       row.accountNumber,

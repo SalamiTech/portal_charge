@@ -1,10 +1,11 @@
-// view-pending.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-import { TableElement, ELEMENT_DATA } from '../../pages/pending-request/pending-request.component';
+import {
+  TableElement,
+  ELEMENT_DATA,
+} from '../../pages/pending-request/pending-request.component';
 
 @Component({
   selector: 'app-view-pending',
@@ -23,7 +24,12 @@ export class ViewPendingComponent implements OnInit {
 
   ngOnInit(): void {
     const accountNumber = this.route.snapshot.paramMap.get('accountNumber');
-    const rowData = ELEMENT_DATA.find((row: TableElement) => row.accountNumber === accountNumber);
+    console.log('Retrieved accountNumber from route:', accountNumber);
+
+    const rowData = ELEMENT_DATA.find(
+      (row) => row.accountNumber === accountNumber
+    );
+    console.log('Fetched rowData from ELEMENT_DATA:', rowData);
 
     this.form = this.fb.group({
       accountNumber: [rowData?.accountNumber],
@@ -32,10 +38,10 @@ export class ViewPendingComponent implements OnInit {
       amount: [rowData?.amount],
       status: [rowData?.status],
       typeOfOffense: [rowData?.typeOfOffense],
-      date: [rowData?.date]
+      date: [rowData?.date],
     });
 
-    // Disable the form for viewing only
+    // Disabled the form for viewing only
     this.form.disable();
   }
 
@@ -44,6 +50,6 @@ export class ViewPendingComponent implements OnInit {
   }
 
   doneButton() {
-    this.goBack(); 
+    this.goBack();
   }
 }

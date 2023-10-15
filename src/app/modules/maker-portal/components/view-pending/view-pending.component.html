@@ -3,13 +3,20 @@
         <div (click)="goBack()" matRipple class="back-btn">
             <img src="assets/svgs/chevron-right.svg" alt="">
         </div>
-        <span>View Pending</span>
+        <span>View Pending Request</span>
     </div>
 </div>
 
+<div class="top-description">
+    <img src="assets/svgs/icn-time-m.svg" alt="" class="description-icon">
+    This request is pending. You can only view details of the person
+</div>
+
+
+
 <mat-card class="custom-card">
     <mat-card-header>
-        <mat-card-title class="mat-card-title">Fill in the details of the charge request.</mat-card-title>
+        <mat-card-title class="mat-card-title"> View details of the pending request.</mat-card-title>
     </mat-card-header>
 
     <form [formGroup]="form">
@@ -51,7 +58,7 @@
             <mat-divider></mat-divider>
 
             <mat-card-actions class="form1-but">
-                <button class="form1-button" (click)="doneButton()" mat-raised-button color="primary" mat-button>
+                <button class="form1-button blue-button" (click)="doneButton()" mat-raised-button color="primary" mat-button>
                     Done
                 </button>
             </mat-card-actions>
