@@ -15,6 +15,7 @@ import { DashTableComponent } from './components/dash-table/dash-table.component
 import { ViewApprovedComponent } from './components/view-approved/view-approved.component';
 import { ViewRejectedComponent } from './components/view-rejected/view-rejected.component';
 import { ViewPendingComponent } from './components/view-pending/view-pending.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,13 +30,15 @@ import { ViewPendingComponent } from './components/view-pending/view-pending.com
     DashTableComponent,
     ViewApprovedComponent,
     ViewRejectedComponent,
-    ViewPendingComponent
+    ViewPendingComponent,
   ],
   imports: [
     CommonModule,
     MakerPortalRoutingModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
+
   ]
 })
 export class MakerPortalModule { }

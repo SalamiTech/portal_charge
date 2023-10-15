@@ -9,6 +9,9 @@ import { HistoryComponent } from './pages/history/history.component';
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { AddNewRequestComponent } from './pages/add-new-request/add-new-request.component';
 import { DashTableComponent } from './components/dash-table/dash-table.component';
+import { ViewPendingComponent } from './components/view-pending/view-pending.component';
+import { ViewRejectedComponent } from './components/view-rejected/view-rejected.component';
+import { ViewApprovedComponent } from './components/view-approved/view-approved.component';
 
 const routes: Routes = [
   {
@@ -22,9 +25,13 @@ const routes: Routes = [
       { path: 'approved-request', component: ApprovedRequestComponent },
       { path: 'rejected-request', component: RejectedRequestComponent },
       { path: 'history', component: HistoryComponent },
-      { path: 'user-management', component: UserManagementComponent }
+      { path: 'user-management', component: UserManagementComponent },
+      { path: 'view-pending/:id', component: ViewPendingComponent },
+      { path: 'view-rejected/:id', component: ViewRejectedComponent },
+      { path: 'view-approved/:id', component: ViewApprovedComponent }
     ]
-  }
+  },
+
 ];
 
 @NgModule({
