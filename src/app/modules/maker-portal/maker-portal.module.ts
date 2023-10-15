@@ -12,6 +12,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { MaterialModule } from 'src/app/material.module';
 import { AddNewRequestComponent } from './pages/add-new-request/add-new-request.component';
 import { DashTableComponent } from './components/dash-table/dash-table.component';
+import { ViewApprovedComponent } from './components/view-approved/view-approved.component';
+import { ViewRejectedComponent } from './components/view-rejected/view-rejected.component';
+import { ViewPendingComponent } from './components/view-pending/view-pending.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { DashTableComponent } from './components/dash-table/dash-table.component
     HistoryComponent,
     UserManagementComponent,
     AddNewRequestComponent,
-    DashTableComponent
+    DashTableComponent,
+    ViewApprovedComponent,
+    ViewRejectedComponent,
+    ViewPendingComponent
   ],
   imports: [
     CommonModule,
