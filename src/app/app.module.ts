@@ -18,6 +18,7 @@ import { StateStorageService } from './shared/services/state-storage.service';
 import { UploadService } from './shared/services/upload.service';
 import { WizardService } from './shared/services/wizard.service';
 import { MaterialModule } from './material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -46,7 +47,8 @@ import { MaterialModule } from './material.module';
         AppRoutingModule,
         BrowserAnimationsModule,
         SharedModule,
-        MaterialModule
+        MaterialModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 
 export interface TableElement {
@@ -14,66 +15,66 @@ export interface TableElement {
   
 }
 
-const ELEMENT_DATA: TableElement[] = [
+export const ELEMENT_DATA: TableElement[] = [
  
   {
-    accountNumber: '673848990241',
-    name: 'Jessica Aidoo',
+    accountNumber: '673848990222',
+    name: 'Howie Aidoo',
     roleOfPerson: 'FrontEnd',
     amount: 'GHC 50',
     status: 'Rejected',
     typeOfOffense: 'Late to Stand Up',
-    date: '09-Nov-2023', 
+    date: '09-Nov-2023',
+  },
+
+  {
+    accountNumber: '6738489334342',
+    name: 'Ama Santiago',
+    roleOfPerson: 'FrontEnd',
+    amount: 'GHC 50',
+    status: 'Rejected',
+    typeOfOffense: 'Late to Stand Up',
+    date: '09-Nov-2023',
   },
 
   {
     accountNumber: '673848990241',
-    name: 'Jessica Aidoo',
+    name: 'Nipa Ye-Cobra',
     roleOfPerson: 'FrontEnd',
     amount: 'GHC 50',
     status: 'Rejected',
     typeOfOffense: 'Late to Stand Up',
-    date: '09-Nov-2023', 
+    date: '09-Nov-2023',
   },
 
   {
-    accountNumber: '673848990241',
-    name: 'Jessica Aidoo',
-    roleOfPerson: 'FrontEnd',
-    amount: 'GHC 50',
+    accountNumber: '673848590241',
+    name: 'Naa Despite',
+    roleOfPerson: 'BackEnd',
+    amount: 'GHC 150',
     status: 'Rejected',
     typeOfOffense: 'Late to Stand Up',
-    date: '09-Nov-2023', 
+    date: '09-Nov-2023',
   },
 
   {
-    accountNumber: '673848990241',
-    name: 'Jessica Aidoo',
+    accountNumber: '673848920241',
+    name: 'Amos Aidoo',
     roleOfPerson: 'FrontEnd',
     amount: 'GHC 50',
     status: 'Rejected',
     typeOfOffense: 'Late to Stand Up',
-    date: '09-Nov-2023', 
+    date: '09-Nov-2023',
   },
 
   {
-    accountNumber: '673848990241',
-    name: 'Jessica Aidoo',
+    accountNumber: '673838990241',
+    name: 'Fanman Aidoo',
     roleOfPerson: 'FrontEnd',
     amount: 'GHC 50',
     status: 'Rejected',
     typeOfOffense: 'Late to Stand Up',
-    date: '09-Nov-2023', 
-  },
-
-  {
-    accountNumber: '673848990241',
-    name: 'Jessica Aidoo',
-    roleOfPerson: 'FrontEnd',
-    amount: 'GHC 50',
-    status: 'Rejected',
-    typeOfOffense: 'Late to Stand Up',
-    date: '09-Nov-2023', 
+    date: '09-Nov-2023',
   },
   
 ];
@@ -120,6 +121,17 @@ export class RejectedRequestComponent {
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row`;
   }
+
+  constructor(private router: Router) {}
+  navigateToDetails(row: TableElement) {
+    // Navigate to the details view component and pass the selected row data
+    console.log("Navigating to details with data:", row);
+    this.router.navigate([
+      '/maker-portal/home/view-rejected',
+      row.accountNumber,
+    ]);
+  }
 }
+
 
 

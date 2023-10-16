@@ -36,7 +36,7 @@ export const ELEMENT_DATA: TableElement[] = [
 
   {
     accountNumber: '673848990241',
-    name: 'Jude Yeboah',
+    name: 'Kofi Yeboah',
     roleOfPerson: 'FrontEnd',
     amount: 'GHC 50',
     status: 'Pending',
@@ -45,7 +45,7 @@ export const ELEMENT_DATA: TableElement[] = [
   },
 
   {
-    accountNumber: '673848990241',
+    accountNumber: '673848590241',
     name: 'Kwame Despite',
     roleOfPerson: 'BackEnd',
     amount: 'GHC 150',
@@ -55,8 +55,8 @@ export const ELEMENT_DATA: TableElement[] = [
   },
 
   {
-    accountNumber: '673848990241',
-    name: 'Jessica Aidoo',
+    accountNumber: '673848920241',
+    name: 'Elizabeth Aidoo',
     roleOfPerson: 'FrontEnd',
     amount: 'GHC 50',
     status: 'Pending',
@@ -65,7 +65,7 @@ export const ELEMENT_DATA: TableElement[] = [
   },
 
   {
-    accountNumber: '673848990241',
+    accountNumber: '673838990241',
     name: 'Jessica Aidoo',
     roleOfPerson: 'FrontEnd',
     amount: 'GHC 50',

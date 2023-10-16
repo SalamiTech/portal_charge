@@ -1,1 +1,67 @@
-<p>view-approved works!</p>
+<div class="top-bar">
+    <div class="back-btn-wrapper">
+        <div (click)="goBack()" matRipple class="back-btn">
+            <img src="assets/svgs/chevron-right.svg" alt="">
+        </div>
+        <span>View Approved Request</span>
+    </div>
+</div>
+
+<div class="top-description">
+    <img src="assets/svgs/icn_check_circle_solid.svg" alt="" class="description-icon">
+    This request is approved. You can only view details of the person
+</div>
+
+
+
+<mat-card class="custom-card">
+    <mat-card-header>
+        <mat-card-title class="mat-card-title"> View details of the approved request.</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="form">
+        <mat-card-content class="form-content">
+            <mat-form-field class="acc-name" appearance="outline">
+                <mat-label>Account Name</mat-label>
+                <input matInput type="text" formControlName="name" readonly />
+            </mat-form-field>
+
+            <mat-form-field class="acc-input" appearance="outline">
+                <mat-label>Account Number</mat-label>
+                <input matInput type="text" placeholder="Account Number" formControlName="accountNumber" readonly />
+            </mat-form-field>
+
+            <div class="form-field-row">
+                <mat-form-field class="role-of-employee" appearance="outline">
+                    <mat-label>Role of Employee</mat-label>
+                    <input matInput type="text" formControlName="roleOfPerson" readonly />
+                </mat-form-field>
+
+                <mat-form-field class="type-of-offense" appearance="outline">
+                    <mat-label>Type of Offense</mat-label>
+                    <input matInput type="text" formControlName="typeOfOffense" readonly />
+                </mat-form-field>
+            </div>
+
+            <div class="form-field-row">
+                <mat-form-field class="amount-field" appearance="outline">
+                    <mat-label>Amount</mat-label>
+                    <input matInput type="text" placeholder="Amount" formControlName="amount" readonly />
+                </mat-form-field>
+
+                <mat-form-field class="date-of-offense-field" appearance="outline">
+                    <mat-label>Date of Offense</mat-label>
+                    <input matInput type="text" formControlName="date" readonly />
+                </mat-form-field>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <mat-card-actions class="form1-but">
+                <button class="form1-button blue-button" (click)="doneButton()" mat-raised-button color="primary" mat-button>
+                    Done
+                </button>
+            </mat-card-actions>
+        </mat-card-content>
+    </form>
+</mat-card>
