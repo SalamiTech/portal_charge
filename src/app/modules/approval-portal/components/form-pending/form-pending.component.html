@@ -58,10 +58,14 @@
             <mat-divider></mat-divider>
 
             <mat-card-actions class="form1-but">
-                <button class="form1-button blue-button" (click)="doneButton()" mat-raised-button color="primary" mat-button>
-                    Done
+                <button class="form1-button green-button" (click)="doneButton()" mat-raised-button color="primary" mat-button>
+                    Accept
+                </button>
+                <button class="form1-button red-button" (click)="onReject()" mat-raised-button color="primary" mat-button>
+                    Reject
                 </button>
             </mat-card-actions>
+                    
         </mat-card-content>
     </form>
 </mat-card>

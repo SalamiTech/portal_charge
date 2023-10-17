@@ -19,3 +19,18 @@ body .cdk-overlay-container .success-snackbar.mat-mdc-snack-bar-container .mdc-s
 body .cdk-overlay-container .success-snackbar.mat-mdc-snack-bar-container .mdc-snackbar__surface {
     color: white !important;
 }
+
+
+// rejected snackbar
+body .cdk-overlay-container .snackbar-error.mat-mdc-snack-bar-container,
+
+body .cdk-overlay-container .snackbar-error.mat-mdc-snack-bar-container * {
+    background-color: red !important;
+    color: white !important;
+}
+
+body .cdk-overlay-container .snackbar-error.mat-mdc-snack-bar-container .mdc-snackbar__action .mat-mdc-button,
+
+body .cdk-overlay-container .snackbar-error.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    color: white !important;
+}

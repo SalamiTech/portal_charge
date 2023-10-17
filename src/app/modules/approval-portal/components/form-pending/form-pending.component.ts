@@ -6,6 +6,9 @@ import {
   TableElement,
   ELEMENT_DATA,
 } from '../../pages/pending-request/pending-request.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { RejectreasondialogueComponent } from '../rejectreasondialogue/rejectreasondialogue.component';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-form-pending',
   templateUrl: './form-pending.component.html',
@@ -17,7 +20,10 @@ export class FormPendingComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private _snackBar: MatSnackBar,
+    private router: Router,
+    private dialog: MatDialog 
   ) {}
 
   ngOnInit(): void {
@@ -43,12 +49,42 @@ export class FormPendingComponent implements OnInit {
     this.form.disable();
   }
 
+  openSnackBar() {
+    this._snackBar.open('Request approved!', 'Close', {
+      duration: 5000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      panelClass: 'success-snackbar'
+    });
+
+    
+}
+
   goBack(): void {
     this.location.back();
   }
 
   doneButton() {
-    this.goBack();
+    this.router.navigate(['approval-portal/home/dashboard']).then(() => {
+      setTimeout(() => {
+        this.openSnackBar();
+      }, 100);
+    });
   }
-}
 
+  onReject(): void {
+    const dialogRef = this.dialog.open(RejectreasondialogueComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+            this._snackBar.open('Request Rejected', 'Close', {
+                duration: 3000,
+                horizontalPosition: 'center',
+                verticalPosition: 'top',
+                panelClass: ['snackbar-error']
+            });
+            this.goBack();
+        }
+    });
+}
+}

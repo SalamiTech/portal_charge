@@ -1,1 +1,20 @@
-<p>rejectreasondialogue works!</p>
+<h2 mat-dialog-title>Reject Request</h2>
+<mat-dialog-content>
+  <mat-form-field class="first" appearance="fill" appearance="outline">
+    <mat-label>Select a Reason</mat-label>
+    <mat-select>
+      <mat-option value="reason1">Policy not clearly violated</mat-option>
+      <mat-option value="reason2">Lack of concrete evidence</mat-option>
+      <mat-option value="reason3">Reasonable explanation given</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill" appearance="outline" class="full-width">
+    <mat-label>Additional Comments</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-divider></mat-divider>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true">Confirm</button>
+</mat-dialog-actions>

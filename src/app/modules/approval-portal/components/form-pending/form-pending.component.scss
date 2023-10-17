@@ -79,12 +79,17 @@
 }
 
 
-.blue-button {
-    background-color: #007BFF !important;
+.green-button {
+    background-color: green !important;
     color: #ffffff !important;
-    margin-left: 495px;
+    margin-left: 480px;
 }
 
+.red-button {
+    background-color: red !important;
+    color: #ffffff !important;
+    margin-left: -170px;
+}
 
 mat-form-field {
     margin-bottom: 5px;
