@@ -15,7 +15,7 @@ export interface TableElement {
   
 }
 
-const ELEMENT_DATA: TableElement[] = [
+export const ELEMENT_DATA: TableElement[] = [
  
   {
     accountNumber: '673848990222',
@@ -123,7 +123,7 @@ export class ApprovedRequestsComponent {
     }
 
     constructor(private router: Router) {}
-  navigateToDetails(row: TableElement) {
+      navigateToDetails(row: TableElement) {
     // Navigate to the details view component and pass the selected row data
     console.log("Navigating to details with data:", row);
     this.router.navigate([

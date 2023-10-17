@@ -3,8 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { ELEMENT_DATA } from 'src/app/modules/maker-portal/pages/pending-request/pending-request.component';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { ELEMENT_DATA } from '../../pages/approved-requests/approved-requests.component';
 
 @Component({
   selector: 'app-form-approval',
@@ -18,8 +17,7 @@ export class FormApprovalComponent implements OnInit {
     private fb: FormBuilder,
     private route: ActivatedRoute,
     private location: Location,
-    private snackBar: MatSnackBar
-
+    
   ) {}
 
   ngOnInit(): void {
@@ -49,25 +47,7 @@ export class FormApprovalComponent implements OnInit {
     this.location.back();
   }
 
-  approve() {
-    // ... any other logic for approval
-    this.snackBar.open('Details have been approved', 'Close', {
-      duration: 2000,
-    });
+  doneButton() {
     this.goBack();
   }
-
-  openRejectDialog() {
-    const dialogRef = this.dialog.open(RejectReasonDialogComponent);
-  
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.snackBar.open('Details have been rejected', 'Close', {
-          duration: 2000,
-        });
-        this.goBack();
-      }
-    });
-  }
-  
 }

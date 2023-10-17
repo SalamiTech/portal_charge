@@ -126,7 +126,7 @@
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
             <tr mat-row *matRowDef="let row;  odd as isOdd; columns: displayedColumns;" [class.odd-row]="isOdd"
-                (click)="selection.toggle(row)" class="hoverable-row"
+                (click)="navigateToDetails(row)" class="hoverable-row"
                 [ngClass]="{'selected': selection.isSelected(row)}">
             </tr>
         </table>
