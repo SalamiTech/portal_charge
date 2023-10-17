@@ -2,7 +2,7 @@
 
   <section class="main-login-items ">
 
-    <p class="login-tag-title">Evaluation and Insurance</p>
+    <p class="login-tag-title">Stanbic Bank</p>
 
 
     <section >
@@ -14,7 +14,7 @@
   
       </section>
      
-        <form [formGroup]="loginFormGroup" (submit)="login()" class="login_form_group">
+        <form style="display:none" [formGroup]="loginFormGroup" (submit)="login()" class="login_form_group">
           <mat-form-field appearance="outline" [style.width.px]=327>
             <mat-label>SAP ID</mat-label>
             <input name="username" formControlName="username" [(ngModel)]="loginData.username" matInput placeholder="SAP ID">
@@ -28,24 +28,32 @@
           </mat-form-field>
           <br>
 
-          <ng-container>
+          <ng-container  >
         
           <button 
-        
-           *ngIf="!loader else loginProgress" (click)="login()"
-           [disabled]="loginFormGroup.valid" type="submit" class="login-btn" mat-raised-button>SIGN IN</button>
+           *ngIf="!loader else loginProgress"
+           [disabled]="!loginFormGroup.valid" type="submit" class="login-btn" mat-raised-button>SIGN IN</button>
+
         </ng-container>
-        </form>
-  
+      </form>
+
+      <button 
+      class="sso" (click)="login()" mat-raised-button>
+        <section >
+          <img [src]="assetUrl+'/assets/svgs/microsoft.svg'" alt="" srcset="">
+          <span>Continue With Microsoft</span>
+        </section>
+      </button>
+
     </section>
 
   </section>
 
 
-  <section [style.backgroundImage]="'url('+assetUrl+'/assets/svgs/login_backdrop.svg)'" class="main-login-items login-background">
+  <section [style.backgroundImage]="'url('+assetUrl+'/assets/svgs/back-drop.svg)'" class="main-login-items login-background">
 
-    <img  [src]="assetUrl+'/assets/svg/bank_logo.svg'" class="sb_tag" srcset="">
-    <img  [src]="assetUrl+'/assets/svg/banner_sv.svg'" class="it_can_be" srcset="">
+    <img  [src]="assetUrl+'/assets/images/sb_logo.png'" class="sb_tag" srcset="">
+    <img  [src]="assetUrl+'/assets/svgs/it_can_be.svg'" class="it_can_be" srcset="">
 
   </section>
 

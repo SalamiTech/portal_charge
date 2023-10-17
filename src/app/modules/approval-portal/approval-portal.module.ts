@@ -12,6 +12,8 @@ import { MaterialModule } from 'src/app/material.module';
 import { FormPendingComponent } from './components/form-pending/form-pending.component';
 import { FormRejectedComponent } from './components/form-rejected/form-rejected.component';
 import { FormApprovalComponent } from './components/form-approval/form-approval.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RejectreasondialogueComponent } from './components/rejectreasondialogue/rejectreasondialogue.component';
 
 
 @NgModule({
@@ -23,13 +25,15 @@ import { FormApprovalComponent } from './components/form-approval/form-approval.
         HistoryComponent,
         FormPendingComponent,
         FormRejectedComponent,
-        FormApprovalComponent,    
+        FormApprovalComponent,
+        RejectreasondialogueComponent,    
     ],
     imports: [
         CommonModule,
         ApprovalPortalRoutingModule,
         SharedModule,
-        MaterialModule
+        MaterialModule,
+        ReactiveFormsModule
         
     ]
 })

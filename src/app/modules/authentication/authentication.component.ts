@@ -14,6 +14,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./authentication.component.scss']
 })
 export class AuthenticationComponent implements OnInit {
+navigateByUrl() {
+throw new Error('Method not implemented.');
+}
 
   assetUrl = environment.assetsUrl;
 
@@ -44,18 +47,22 @@ export class AuthenticationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   login() {
+    this.router.navigate(['/maker-portal/home/dashboard']);
+  }
+
+
+  // login() {
 
     
 
-    this.loader = true;
+  //   this.loader = true;
 
-    this.router.navigateByUrl('/dashboard')
-    this.authService.signin(this.loginData).subscribe((res: ILoginResponse) => {
+  //   this.router.navigateByUrl('/maker-portal/home/dashboard')
+  //   this.authService.signin(this.loginData).subscribe((res: ILoginResponse) => {
 
-      console.log(res.hostHeaderInfo)
+  //     console.log(res.hostHeaderInfo)
 
-    });
-  }
+  //   });
+  // }
 }

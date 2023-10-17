@@ -1,0 +1,103 @@
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-bar .back-btn-wrapper {
+    margin-top: 10px;
+    margin-left: 30px;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.back-btn-wrapper .back-btn {
+    border-radius: 999px;
+    border: 1px solid #BFDCFC;
+    background: #FFF;
+    display: inline-flex;
+    height: 2.5rem;
+    padding: 0rem 0.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.back-btn-wrapper span {
+    color: #1A314D;
+    font-size: 1.1rem;
+}
+
+.top-description {
+    width: 590px; 
+    height: 30px;
+    border-radius: 12px;
+    background: rgba(0, 133, 51, 0.20);
+    display: flex;
+    align-items: center; 
+    padding-left: 20px; 
+    margin: 10px auto; 
+    margin-top: 50px;
+    margin-bottom: -80px;
+    padding: 6px;
+    position: relative; 
+    gap: 10px; 
+}
+
+.description-icon {
+    height: 30px;
+    width: auto;
+}
+
+
+
+.custom-card {
+    margin: auto;
+    margin-top: 100px;
+    width: 600px;
+    height: fit-content;
+    display: block;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.mat-card-title {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.form-content {
+    padding-bottom: 10px;
+}
+
+.acc-name, .acc-input {
+    width: 570px;
+}
+
+
+.mat-primary {
+    background-color: green;
+  }
+  
+  .mat-warn {
+    background-color: red;
+  }
+  
+
+
+mat-form-field {
+    margin-bottom: 5px;
+}
+
+.role-of-employee, .type-of-offense, .amount-field, .date-of-offense-field {
+    width: 270px;
+}
+
+.form-field-row {
+    display: flex;
+    justify-content: space-between;
+}

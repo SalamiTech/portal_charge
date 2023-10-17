@@ -24,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     declarations: [
         AppComponent,
         MakerPortalComponent,
-        ApprovalPortalComponent
+        ApprovalPortalComponent,
+        
     ],
     providers: [
         APIService,

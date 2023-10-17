@@ -6,6 +6,11 @@ import { PendingRequestComponent } from './pages/pending-request/pending-request
 import { ApprovedRequestsComponent } from './pages/approved-requests/approved-requests.component';
 import { RejectedRequestsComponent } from './pages/rejected-requests/rejected-requests.component';
 import { HistoryComponent } from './pages/history/history.component';
+import { FormApprovalComponent } from '../approval-portal/components/form-approval/form-approval.component';
+import { FormPendingComponent } from '../approval-portal/components/form-pending/form-pending.component';
+import { FormRejectedComponent } from '../approval-portal/components/form-rejected/form-rejected.component';
+
+
 
 const routes: Routes = [
   {
@@ -19,6 +24,9 @@ const routes: Routes = [
       { path: 'approved-request', component: ApprovedRequestsComponent },
       { path: 'rejected-request', component: RejectedRequestsComponent },
       { path: 'history', component: HistoryComponent },
+      { path: 'form-approved/:accountNumber', component: FormApprovalComponent},
+      { path: 'form-pending/:accountNumber', component: FormPendingComponent },
+      { path: 'form-rejected/:accountNumber', component: FormRejectedComponent }
   
 
     ]

@@ -28,7 +28,8 @@ const routes: Routes = [
       { path: 'user-management', component: UserManagementComponent },
       { path: 'view-pending/:accountNumber', component: ViewPendingComponent },
       { path: 'view-rejected/:accountNumber', component: ViewRejectedComponent },
-      { path: 'view-approved/:accountNumber', component: ViewApprovedComponent }
+      { path: 'view-approved/:accountNumber', component: ViewApprovedComponent },
+      
     ]
   },
 
