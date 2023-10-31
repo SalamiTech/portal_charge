@@ -46,13 +46,6 @@ export class AddNewRequestComponent {
     { value: "d-1", label: "Missed Stand Up Meeting"},
   ];
 
-  roleofemployee: RoleOfEmployee[] = [
-    { value: "a-0", label: "Intern"},
-    { value: "b-1", label: "NSP"},
-    { value: "c-0", label: "Contract Employee"},
-    { value: "d-1", label: "Full-Time Employee"},
-  ];
-
 
   assetUrl = environment.assetsUrl;
   horizontalPosition: MatSnackBarHorizontalPosition = 'start';
